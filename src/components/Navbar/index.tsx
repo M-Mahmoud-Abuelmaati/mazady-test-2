@@ -23,8 +23,8 @@ const Navbar = ({}: NavbarProps) => {
       </div>
       <div className="hidden lg:flex items-center gap-8">
         <Image src={"/logo.svg"} alt="logo" width={108} height={43} />
-        {navbarItems?.map((item) => (
-          <NavbarItem item={item} selected={selectedItem.name === item.name} onClick={handleClick} />
+        {navbarItems?.map((item, idx) => (
+          <NavbarItem key={idx} item={item} selected={selectedItem.name === item.name} onClick={handleClick} />
         ))}
       </div>
       <div className="flex items-center gap-6">
