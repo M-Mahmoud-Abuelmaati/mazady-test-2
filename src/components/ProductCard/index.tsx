@@ -34,7 +34,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <h4 className="text-sm xl:text-lg text-[#333333]">{product.title}</h4>
+        <h4 className="text-sm xl:text-lg text-[#333333] line-clamp-1">{product.title}</h4>
         <p className="text-[#333333] text-sm xl:text-lg flex items-center gap-1">
           Starting Price
           <span className="text-sm xl:text-lg font-bold text-[#333333]">
@@ -65,7 +65,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <Image
         src={product.isFavorite ? "/favorite-filled.svg" : '/favorite.svg'}
         alt="product-image"
-        className="absolute right-6 top-6 cursor-pointer md:w-7 md:h-7"
+        className="absolute right-2 md:right-6 top-10 md:top-6 cursor-pointer md:w-7 md:h-7"
         width={32}
         height={32}
       />
